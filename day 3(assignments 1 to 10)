@@ -1,0 +1,148 @@
+1.C program to reverse a string without using library function:
+
+
+#include <stdio.h>
+#include <string.h>
+void main(){
+   char string[20],temp;
+   int i,length;
+   printf("Enter String : ");
+   scanf("%s",string);
+   length=strlen(string)-1;
+   for(i=0;i<strlen(string)/2;i++){
+      temp=string[i];
+      string[i]=string[length];
+      string[length--]=temp;
+   }
+   printf("Reverse string :%s",string);
+   
+}
+OUTPUT:
+Enter String : tutorialspoint
+Reverse string :tniopslairotut
+
+2.Find factorial using recursion in C program:
+#include<stdio.h>
+long int multiplyNumbers(int n);
+int main() {
+    int n;
+    printf("Enter a positive integer: ");
+    scanf("%d",&n);
+    printf("Factorial of %d = %ld", n, multiplyNumbers(n));
+    return 0;
+}
+
+long int multiplyNumbers(int n) {
+    if (n>=1)
+        return n*multiplyNumbers(n-1);
+    else
+        return 1;
+}
+OUTPUT:
+Enter a positive integer: 6
+Factorial of 6 = 720
+
+3.        *
+        * *
+      * * *
+    * * * *
+  * * * * *
+code for this pattern?
+
+#include<stdio.h>
+int main()
+{
+    int r,c,n,at;
+    printf("Enter the numbers of row: ");
+    scanf("%d",&n);
+    for(r=1;r<=n;r++)
+    {
+        for(c=(n-r);c>=1;c--)
+        {
+            printf(" ");
+        }
+        for(at=1;at<=r;at++)
+            printf("*",at);
+        printf("\n");
+    }
+    
+
+}
+
+OUTPUT:
+enter the number of rows:5
+          *
+        * *
+      * * *
+    * * * *
+  * * * * *
+
+4.1
+  21
+  321
+  4321
+  54321
+Code for the given pattern:
+#include <stdio.h>
+
+int main()
+{
+    int r,c;
+
+    for(r=1; r<=5; r++)
+    {
+        for(c=r; c>=1; c--)
+        {
+            
+            printf("%d",c);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+5.                 *
+                 * * *
+               * * * * *
+             * * * * * * *
+           * * * * * * * * *
+           * * * * * * * * *
+             * * * * * * *
+               * * * * *
+                 * * *
+                   *
+Coding for the patter?
+#include <stdio.h>
+void main()  
+{
+    int i, j, rows, k;
+    char p;
+    printf("Enter a Symbol or character : ");
+    scanf("%c",&p);
+    printf (" Enter a number to define the rows: ");  
+    scanf("%d", &rows);   
+    int space = rows-1, num=1;  
+    printf("\n");
+    for (i = 1; i <= rows; i++)   
+    {  
+        for (j = 1; j <= space; j++)   
+        {  
+            printf("  ");
+        }  
+        for ( k= 1; k <= num; k++)  
+        {  
+            printf(" %c",p);  
+        }  
+        if(space > i)  
+        {  
+            space = space -1;  
+            num = num+2;  
+        }  
+        if(space <i)  
+        {  
+            space = space + 1;  
+            num = num -2;  
+        }  
+        printf("\n");  
+    }
+}

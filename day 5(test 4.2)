@@ -1,0 +1,44 @@
+#include<stdio.h>
+int main()
+{
+	int py,c,m,ph,total,agg;
+	printf("enter the marks in python:");
+	scanf("%d",&py);
+	printf("enter the marsk in c programming:");
+	scanf("%d",&c);
+	printf("enter the marks in maths:");
+	scanf("%d",&m);
+	printf("enter the marks in physics:");
+	scanf("%d",&ph);
+	if(py,c,ph,m<0)
+	{
+		printf("INVALID DATA");
+	}
+	else
+	{
+		total=py+c+m+ph;
+		printf("TOTAL=%d",total);
+		agg=total/4;
+		printf("\nAggregate=%d",agg);
+		if(agg>75)
+		{
+			printf("\nDISTINCTION");
+		}
+		else if((agg>=60)&&(agg<75))
+		{
+			printf("\nFIRST DIVISION");
+		}
+		else if((agg>=50)&&(agg<60))
+		{
+			printf("\nSECOND DIVISION");
+		}
+		else if((agg>=40)&&(agg<50))
+		{
+			printf("\nTHIRD DIVISION");
+		}
+		else
+		{
+			printf("\nFAIL");
+		}
+	}
+}
